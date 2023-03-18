@@ -1,12 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-
+import { TarefaService } from './shared';
+import { Tarefa } from './shared';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule
+  ],
+  // adicionar manual
+  providers: [
+    TarefaService
   ]
 })
-export class TarefasModule { }
+export class TarefasModule { 
+
+  constructor() {}
+
+  listarTodos(): Tarefa[] {
+    //const tarefas = localStorage('taregas');
+    //return tarefas ? JSON.parse(tarefas) : [];
+    return [];
+  }
+}
