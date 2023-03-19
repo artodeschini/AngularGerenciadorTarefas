@@ -9,11 +9,13 @@ import { TarefaService } from './shared';
 import { Tarefa } from './shared';
 import { ListarTarefasComponent } from './listar-tarefas/listar-tarefas.component';
 import { CadastrarTarefaComponent } from './cadastrar-tarefa/cadastrar-tarefa.component';
+import { EditarTarefaComponent } from './editar-tarefa/editar-tarefa.component';
 
 @NgModule({
   declarations: [
     ListarTarefasComponent,
-    CadastrarTarefaComponent
+    CadastrarTarefaComponent,
+    EditarTarefaComponent
   ],
   imports: [
     CommonModule,
