@@ -22,7 +22,21 @@ export class TarefaService {
 
   buscarPorId(id: number): Tarefa {
     const tarefas = this.listarTodos();
-    return tarefas.find(Tarefa => Tarefa.id === id);
+    console.log(tarefas);
+    const e = tarefas.find(t => t.id.toString() === id.toString());
+    // let e; // = tarefas.find(t => t.id === id);
+    // let i = 0;
+    // for (i = 0; i < tarefas.length; i++) {
+    //   console.log(tarefas[i].id);
+    //   console.log(typeof(tarefas[i].id))
+    //   console.log(id)
+    //   console.log(typeof(parseInt(id)))
+    //   if (tarefas[i].id === parseInt(id.toString())) {
+    //     e = tarefas[i];
+    //   }
+    // }
+    console.log(`pegando o elemtno do storage ${e}`);
+    return e ? e : new Tarefa();
   }
 
   atualizar(tarefa: Tarefa): void {
