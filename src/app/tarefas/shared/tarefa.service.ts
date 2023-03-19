@@ -22,7 +22,7 @@ export class TarefaService {
 
   buscarPorId(id: number): Tarefa {
     const tarefas = this.listarTodos();
-    console.log(tarefas);
+    // console.log(tarefas);
     const e = tarefas.find(t => t.id.toString() === id.toString());
     // let e; // = tarefas.find(t => t.id === id);
     // let i = 0;
@@ -35,14 +35,14 @@ export class TarefaService {
     //     e = tarefas[i];
     //   }
     // }
-    console.log(`pegando o elemtno do storage ${e}`);
+    // console.log(`pegando o elemtno do storage ${e}`);
     return e ? e : new Tarefa();
   }
 
   atualizar(tarefa: Tarefa): void {
     const tarefas = this.listarTodos();
     tarefas.forEach((obj, index, objs) => {
-      if (tarefa.id === obj.id) {
+      if (tarefa.id.toString() === obj.id.toString()) {
         objs[index] = tarefa;
       }
     });
@@ -52,14 +52,14 @@ export class TarefaService {
 
   remover(id: number): void {
     let tarefas = this.listarTodos();
-    tarefas = tarefas.filter(t => t.id !== id);
+    tarefas = tarefas.filter(t => t.id.toString() !== id.toString());
     localStorage['tarefas'] = JSON.stringify(tarefas);
   }
 
   atualizarStatus(id: number): void {
     const tarefas = this.listarTodos();
     tarefas.forEach((obj, index, objs) => {
-      if (id === obj.id) {
+      if (id.toString() === obj.id.toString()) {
         objs[index].concluida = !obj.concluida; // inverte o status
       }
     });
