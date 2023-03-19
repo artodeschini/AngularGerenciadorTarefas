@@ -23,7 +23,8 @@
         <input 
           type="checkbox"
           [value]="t.id"
-          [checked]="t.concluida">
+          [checked]="t.concluida"
+          (click)="atualizarStatus(t)">
       </td>
       <td class="text-center" style="width: 200px">
         <a [routerLink]="['/tarefas/editar', t.id]"
