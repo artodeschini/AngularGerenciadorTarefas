@@ -13,13 +13,17 @@
         </a>
     </th>
     </tr>
-    <tr>
-      <td>
-        
+    <!-- data manipulada pelo angular com ngFor é necessario importar o FormsModule -->
+    <tr *ngFor="let t of tarefas">
+      <td 
+        [class.success]="!t.concluida">
+        {{ t.nome }}
       </td>
       <td style="width: 70px" class="text-center">
         <input 
-          type="checkbox">
+          type="checkbox"
+          [value]="t.id"
+          [checked]="t.concluida">
       </td>
       <td class="text-center" style="width: 200px">
         <a 
@@ -39,4 +43,4 @@
   </tbody>
 </table>
 
-<p>Nenhuma tarefa cadastrada.</p>
+<p *ngIf="tarefas.length==0">Nenhuma tarefa cadastrada.</p>

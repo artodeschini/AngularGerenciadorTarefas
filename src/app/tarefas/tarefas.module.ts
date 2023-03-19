@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+// necessario adicionar para poder manipular com as diretivas e as rotas
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
 import { TarefaService } from './shared';
 import { Tarefa } from './shared';
 import { ListarTarefasComponent } from './listar-tarefas/listar-tarefas.component';
@@ -10,7 +14,9 @@ import { ListarTarefasComponent } from './listar-tarefas/listar-tarefas.componen
     ListarTarefasComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    FormsModule
   ],
   // adicionar manual
   providers: [
