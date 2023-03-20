@@ -16,6 +16,7 @@
     <!-- data manipulada pelo angular com ngFor é necessario importar o FormsModule -->
     <tr *ngFor="let t of tarefas">
       <td 
+        [tarefaConcluida]="t.concluida"
         [class.success]="!t.concluida">
         {{ t.nome }}
       </td>
