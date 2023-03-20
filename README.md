@@ -1,6 +1,10 @@
 # Gerenciador De Tarefas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.3.
+Este projeto foi criado [Angular CLI](https://github.com/angular/angular-cli) version 15.2.3.
+
+```bash
+npx -p @angular/cli ng new gerenciador-de-tarefas
+```
 
 ## projeto criado com
 
@@ -22,7 +26,7 @@ No arquivo `tsconfig.json` as propriedade
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. If you use ng as global and navigate to [acesse the app](http://localhost:4200/) in the browser. If you use ng as local in your project use this syntax `npm run ng serve`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
